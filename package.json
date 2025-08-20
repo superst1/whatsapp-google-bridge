@@ -1,0 +1,13 @@
+{
+  "name": "whatsapp-google-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between WhatsApp Cloud API and Google Apps Script",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  }
+}
