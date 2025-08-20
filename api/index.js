@@ -43,8 +43,19 @@ app.post('/api', async (req, res) => {
     }
     res.sendStatus(200);
   } catch (error) {
-    console.error('Error:', error.message);
-    res.sendStatus(500);
+   // console.error('Error:', error.message);
+    //    res.sendStatus(500);
+    //nuevo cod
+    console.error('❌ Status:', error.response?.status);
+    console.error('❌ Headers:', error.response?.headers);
+    console.error('❌ Body:', error.response?.data);
+    console.error('❌ Payload enviado:', {
+      messaging_product: "whatsapp",
+      to: from,
+      text: { body: reply }
+    });
+    return res.sendStatus(500);
+    //fin nuevo cod
   }
 });
 
